@@ -6,12 +6,16 @@ namespace IntroductionCourse
     {
         static void Main(string[] args)
         {
+            // Переменная для вывода названия месяца
             string monthTitle = " ";
 
+            // Вывод пользователю сообщения
             Console.WriteLine("Введите номер месяца от 1 до 12");
 
+            // Ввод пользователем порядковый номер месяца
             int numberOfMonth = Convert.ToInt32(Console.ReadLine());
 
+            // Определение месяца
             switch (numberOfMonth)
             {
                 case 1:
@@ -51,9 +55,10 @@ namespace IntroductionCourse
                     monthTitle = "Декабрь";
                     break;
             }
-          
-            Console.WriteLine($"{monthTitle} - соответствует номеру месяца, который вы выбрали");
 
+            // Вывод результирующего сообщения пользователю
+            Console.WriteLine($"{monthTitle} - соответствует номеру месяца, который вы выбрали");
+            // Ожидание нажатия клвавиши Enter
             Console.ReadLine();
         }
     }
