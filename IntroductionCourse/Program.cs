@@ -6,25 +6,34 @@ namespace IntroductionCourse
     {
         static void Main(string[] args)
         {
-            // Вывод сообщения пользователю
             Console.WriteLine("Введите минимальную температуру за сутки");
+            float minTemp = Convert.ToInt64(Console.ReadLine());            // Ввод пользователем значение минимальной температуры
 
-            // Ввод пользователем значение минимальной температуры
-            float minTemp = Convert.ToInt64(Console.ReadLine());
-
-            // Вывод сообщения пользователю
             Console.WriteLine("Введите максимальную температуру за сутки");
+            float maxTemp = Convert.ToInt64(Console.ReadLine());            // Ввод пользователем значение максимальной температуры
 
-            // Ввод пользователем значение максимальной температуры
-            float maxTemp = Convert.ToInt64(Console.ReadLine());
+            float averageTemp = (minTemp + maxTemp) / 2;                    // Вычисление среднесуточного значения температуры
+            Console.WriteLine($"Среднесуточная температура: {averageTemp}");
 
-            // Вычисление среднесуточного значения температуры
-            float averageTemp = (minTemp + maxTemp) / 2;
+            Console.WriteLine("Введите порядковый номер месяца");
+            int month = Convert.ToInt32(Console.ReadLine());                // Ввод пользователем номера месяца
 
-            // Вывод сообщения пользователю со значением
-            Console.WriteLine($"Среднесуточная температура за сутки равна: {averageTemp}");
+            // Проверка на корректность ввода номера месяца
+            if (month > 12)
+            {
+                Console.WriteLine("Вы ввели некорректный номер месяца");
+                return;
+            }
 
-            // Ожидание нажатия клавиши Enter
+            if ((month == 12 || month == 1 || month == 2) && (averageTemp > 0))
+            {
+                Console.WriteLine("Дождливая погода");
+            }
+            else
+            {
+                return;
+            }
+
             Console.Read();
         }
     }
