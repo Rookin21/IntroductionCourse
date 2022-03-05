@@ -51,7 +51,7 @@ namespace IntroductionCourse
                     monthTitle = "Декабрь";
                     break;
             }
-
+          
             Console.WriteLine($"{monthTitle} - соответствует номеру месяца, который вы выбрали");
 
             Console.ReadLine();
