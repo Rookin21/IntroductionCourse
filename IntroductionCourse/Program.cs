@@ -25,6 +25,7 @@ namespace IntroductionCourse
                 return;
             }
 
+            // Обработка условия для вывода сообщения
             if ((month == 12 || month == 1 || month == 2) && (averageTemp > 0))
             {
                 Console.WriteLine("Дождливая погода");
