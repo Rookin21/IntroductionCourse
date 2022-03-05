@@ -25,8 +25,6 @@ namespace IntroductionCourse
                 Console.WriteLine("Введенное число не является четным");
             }
 
-            // Вывод результирующего сообщения пользователю
-            Console.WriteLine($"{monthTitle} - соответствует номеру месяца, который вы выбрали");
             // Ожидание нажатия клвавиши Enter
             Console.ReadLine();
 
