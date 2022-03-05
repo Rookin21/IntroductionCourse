@@ -6,17 +6,26 @@ namespace IntroductionCourse
     {
         static void Main(string[] args)
         {
-            // Вывод на консоль сообщения
-            Console.WriteLine("Введите имя пользователя:");
+            // Вывод сообщения пользователю
+            Console.WriteLine("Введите целое число");
 
-            // Ввод пользователем имени
-            string user_name = Console.ReadLine();
+            // Ввод числа пользователем
+            int number = Convert.ToInt32(Console.ReadLine());
 
-            // Вывод сообщения используя структуру текущей даты
-            Console.WriteLine($"Привет, {user_name}, сегодня {DateTime.Today.ToShortDateString()}");
+            // Вычисление остатка от деления
+            int parity = number % 2;
 
-            // Ожидание нажатия клавиши Enter
-            Console.Read();
+            // Определение является ли число четным
+            if (parity == 0)
+            {
+                Console.WriteLine("Введенное число является четным");
+            }
+            else
+            {
+                Console.WriteLine("Введенное число не является четным");
+            }
+
+            Console.ReadLine();
 
         }
     }
