@@ -29,6 +29,7 @@ namespace IntroductionCourse
             Console.WriteLine($"{monthTitle} - соответствует номеру месяца, который вы выбрали");
             // Ожидание нажатия клвавиши Enter
             Console.ReadLine();
+
         }
     }
 }
