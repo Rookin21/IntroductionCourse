@@ -6,29 +6,35 @@ namespace IntroductionCourse
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Введите минимальную температуру за сутки");
+            float minTemp = Convert.ToInt64(Console.ReadLine());            // Ввод пользователем значение минимальной температуры
 
-            // Вывод сообщения пользователю
-            Console.WriteLine("Введите целое число");
+            Console.WriteLine("Введите максимальную температуру за сутки");
+            float maxTemp = Convert.ToInt64(Console.ReadLine());            // Ввод пользователем значение максимальной температуры
 
-            // Ввод числа пользователем
-            int number = Convert.ToInt32(Console.ReadLine());
+            float averageTemp = (minTemp + maxTemp) / 2;                    // Вычисление среднесуточного значения температуры
+            Console.WriteLine($"Среднесуточная температура: {averageTemp}");
 
-            // Вычисление остатка от деления
-            int parity = number % 2;
+            Console.WriteLine("Введите порядковый номер месяца");
+            int month = Convert.ToInt32(Console.ReadLine());                // Ввод пользователем номера месяца
 
-            // Определение является ли число четным
-            if (parity == 0)
+            // Проверка на корректность ввода номера месяца
+            if (month > 12)
             {
-                Console.WriteLine("Введенное число является четным");
+                Console.WriteLine("Вы ввели некорректный номер месяца");
+                return;
+            }
+
+            if ((month == 12 || month == 1 || month == 2) && (averageTemp > 0))
+            {
+                Console.WriteLine("Дождливая погода");
             }
             else
             {
-                Console.WriteLine("Введенное число не является четным");
+                return;
             }
 
-            // Ожидание нажатия клвавиши Enter
-            Console.ReadLine();
-
+            Console.Read();
         }
     }
 }
