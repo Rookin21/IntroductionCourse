@@ -6,6 +6,7 @@ namespace IntroductionCourse
     {
         static void Main(string[] args)
         {
+
             // Вывод сообщения пользователю
             Console.WriteLine("Введите целое число");
 
