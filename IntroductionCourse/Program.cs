@@ -57,7 +57,6 @@ namespace IntroductionCourse
             }
             // Вывод результирующего сообщения пользователю
             Console.WriteLine($"{monthTitle} - соответствует номеру месяца, который вы выбрали");
-
             // Ожидание нажатия клвавиши Enter
             Console.ReadLine();
         }
