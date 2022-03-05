@@ -26,7 +26,6 @@ namespace IntroductionCourse
 
             // Ожидание нажатия клавиши Enter
             Console.Read();
-
         }
     }
 }
