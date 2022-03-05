@@ -6,54 +6,23 @@ namespace IntroductionCourse
     {
         static void Main(string[] args)
         {
-            // Переменная для вывода названия месяца
-            string monthTitle = " ";
+            // Вывод сообщения пользователю
+            Console.WriteLine("Введите целое число");
 
-            // Вывод пользователю сообщения
-            Console.WriteLine("Введите номер месяца от 1 до 12");
+            // Ввод числа пользователем
+            int number = Convert.ToInt32(Console.ReadLine());
 
-            // Ввод пользователем порядковый номер месяца
-            int numberOfMonth = Convert.ToInt32(Console.ReadLine());
+            // Вычисление остатка от деления
+            int parity = number % 2;
 
-            // Определение месяца
-            switch (numberOfMonth)
+            // Определение является ли число четным
+            if (parity == 0)
             {
-                case 1:
-                    monthTitle = "Январь";
-                    break;
-                case 2:
-                    monthTitle = "Февраль";
-                    break;
-                case 3:
-                    monthTitle = "Март";
-                    break;
-                case 4:
-                    monthTitle = "Апрель";
-                    break;
-                case 5:
-                    monthTitle = "Май";
-                    break;
-                case 6:
-                    monthTitle = "Июнь";
-                    break;
-                case 7:
-                    monthTitle = "Июль";
-                    break;
-                case 8:
-                    monthTitle = "Август";
-                    break;
-                case 9:
-                    monthTitle = "Сентябрь";
-                    break;
-                case 10:
-                    monthTitle = "Октябрь";
-                    break;
-                case 11:
-                    monthTitle = "Ноябрь";
-                    break;
-                case 12:
-                    monthTitle = "Декабрь";
-                    break;
+                Console.WriteLine("Введенное число является четным");
+            }
+            else
+            {
+                Console.WriteLine("Введенное число не является четным");
             }
 
             // Вывод результирующего сообщения пользователю
