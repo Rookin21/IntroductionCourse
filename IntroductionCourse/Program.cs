@@ -24,6 +24,7 @@ namespace IntroductionCourse
                 Console.WriteLine("Вы ввели некорректный номер месяца");
                 return;
             }
+
             // Обработка условия для вывода сообщения
             if ((month == 12 || month == 1 || month == 2) && (averageTemp > 0))
             {
