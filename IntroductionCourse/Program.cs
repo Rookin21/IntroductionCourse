@@ -58,7 +58,6 @@ namespace IntroductionCourse
                               $"\t    {surnameOfCashier}");
             Console.WriteLine("ПРОДАЖА \t \t     №2890");
             Console.WriteLine($"ИТОГ \t \t \t    ={sumAll}");
-
             Console.ReadLine(); 
         }
     }
