@@ -18,7 +18,6 @@ namespace IntroductionCourse
                 }
             }
             Console.ReadLine();
-          
         }
     }
 }
