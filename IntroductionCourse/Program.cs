@@ -6,36 +6,19 @@ namespace IntroductionCourse
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите минимальную температуру за сутки");
-            float minTemp = Convert.ToInt64(Console.ReadLine());            // Ввод пользователем значение минимальной температуры
+            int[,] matrix = new int[10, 10];                    // Создание массива размерность 10х10
 
-            Console.WriteLine("Введите максимальную температуру за сутки");
-            float maxTemp = Convert.ToInt64(Console.ReadLine());            // Ввод пользователем значение максимальной температуры
-
-            float averageTemp = (minTemp + maxTemp) / 2;                    // Вычисление среднесуточного значения температуры
-            Console.WriteLine($"Среднесуточная температура: {averageTemp}");
-
-            Console.WriteLine("Введите порядковый номер месяца");
-            int month = Convert.ToInt32(Console.ReadLine());                // Ввод пользователем номера месяца
-
-            // Проверка на корректность ввода номера месяца
-            if (month > 12)
-            {
-                Console.WriteLine("Вы ввели некорректный номер месяца");
-                return;
+            for (int i = 0; i < matrix.GetLength(0); i++)       
+            {                                                   // Создание многомерного массива
+                for (int j = 0; j < matrix.GetLength(1); j++)   
+                {
+                    matrix[i, j] = 1;                           // Задаем значения для вывода в массиве = 1
+                    Console.WriteLine($"{new string(' ', i)}{matrix[i, j]}");   // Создаем пустые строки для вывода строк по диагонали                      
+                    break;
+                }
             }
+            Console.ReadLine();
 
-            // Обработка условия для вывода сообщения
-            if ((month == 12 || month == 1 || month == 2) && (averageTemp > 0))
-            {
-                Console.WriteLine("Дождливая погода");
-            }
-            else
-            {
-                return;
-            }
-
-            Console.Read();
         }
     }
 }
