@@ -26,8 +26,7 @@ namespace IntroductionCourse
                 Console.WriteLine();
             }
 
-            Console.ReadLine();
-           
+            Console.ReadLine();           
         }
     }
 }
