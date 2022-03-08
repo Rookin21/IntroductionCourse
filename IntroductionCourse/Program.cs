@@ -20,6 +20,7 @@ namespace IntroductionCourse
             {
                 Console.Write(reverseText[i]);
             }
+
             Console.Read();
         }
     }
