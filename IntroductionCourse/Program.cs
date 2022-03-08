@@ -6,18 +6,28 @@ namespace IntroductionCourse
     {
         static void Main(string[] args)
         {
-            int[,] matrix = new int[10, 10];                    // Создание массива размерность 10х10
+            // Создание массива
+            string[,] phoneBook = 
+            { 
+                { "Александр", " +1 111 111 11 11" },
+                { "Анатолий", " +2 222 222 22 22" },
+                { "Евгений", " +3 333 333 33 33" },
+                { "Максим", " +4 444 444 44 44" },
+                { "Олег", " +5 555 555 55 55" }
+            };
 
-            for (int i = 0; i < matrix.GetLength(0); i++)       
-            {                                                   // Создание многомерного массива
-                for (int j = 0; j < matrix.GetLength(1); j++)   
+            // Запуск цикла для вывода данных массива
+            for (int i = 0; i < phoneBook.GetLength(0); i++)
+            {
+                for (int j = 0; j < phoneBook.GetLength(1); j++)
                 {
-                    matrix[i, j] = 1;                           // Задаем значения для вывода в массиве = 1
-                    Console.WriteLine($"{new string(' ', i)}{matrix[i, j]}");   // Создаем пустые строки для вывода строк по диагонали                      
-                    break;
+                    Console.Write($"{phoneBook[i,j]}");
                 }
+                Console.WriteLine();
             }
+
             Console.ReadLine();
+           
         }
     }
 }
