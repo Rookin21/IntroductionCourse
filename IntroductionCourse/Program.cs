@@ -6,22 +6,32 @@ namespace IntroductionCourse
     {
         static void Main(string[] args)
         {
-            // Ввод пользователем текста
-            string userText = Console.ReadLine();
-            
-            // Текст разбиваем на символы
-            char [] reverseText = userText.ToCharArray();
+            char num1 = ' ';
 
-            // Реверсируем данные
-            Array.Reverse(reverseText);
-
-            // Выводим на экран
-            for (int i = 0; i < reverseText.Length; i++)
+            char[,] seaBattle =
             {
-                Console.Write(reverseText[i]);
-            }
+                { 'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ж', 'З', 'И', 'К' },
+                { 'X', 'O', 'O', 'O', 'X', 'O', 'O', 'O', 'O', 'X' },
+                { 'О', 'O', 'O', 'O', 'X', 'O', 'O', 'O', 'O', 'О' },
+                { 'О', 'O', 'O', 'O', 'O', 'O', 'O', 'X', 'X', 'X' },
+                { 'О', 'X', 'X', 'X', 'X', 'O', 'O', 'O', 'O', 'O' },
+                { 'О', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O' },
+                { 'X', 'O', 'O', 'O', 'O', 'X', 'O', 'O', 'X', 'O' },
+                { 'X', 'O', 'O', 'O', 'O', 'X', 'O', 'O', 'X', 'O' },
+                { 'О', 'O', 'O', 'O', 'O', 'X', 'O', 'O', 'O', 'O' },
+                { 'О', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O' },
+                { 'X', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'X' },
+            };
 
-            Console.Read();
+            for (int i = 0; i < seaBattle.GetLength(0); i++)
+            {
+                for (int j = 0; j < seaBattle.GetLength(1); j++)
+                {
+                    Console.Write($"{seaBattle[i, j]}");
+                }
+                Console.WriteLine();
+            }
+            Console.ReadLine();
         }
     }
 }
