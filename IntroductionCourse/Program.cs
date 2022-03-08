@@ -27,7 +27,7 @@ namespace IntroductionCourse
             }
 
             Console.ReadLine();
-            
+           
         }
     }
 }
