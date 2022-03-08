@@ -6,36 +6,28 @@ namespace IntroductionCourse
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите минимальную температуру за сутки");
-            float minTemp = Convert.ToInt64(Console.ReadLine());            // Ввод пользователем значение минимальной температуры
+            // Создание массива
+            string[,] phoneBook = 
+            { 
+                { "Александр", " +1 111 111 11 11" },
+                { "Анатолий", " +2 222 222 22 22" },
+                { "Евгений", " +3 333 333 33 33" },
+                { "Максим", " +4 444 444 44 44" },
+                { "Олег", " +5 555 555 55 55" }
+            };
 
-            Console.WriteLine("Введите максимальную температуру за сутки");
-            float maxTemp = Convert.ToInt64(Console.ReadLine());            // Ввод пользователем значение максимальной температуры
-
-            float averageTemp = (minTemp + maxTemp) / 2;                    // Вычисление среднесуточного значения температуры
-            Console.WriteLine($"Среднесуточная температура: {averageTemp}");
-
-            Console.WriteLine("Введите порядковый номер месяца");
-            int month = Convert.ToInt32(Console.ReadLine());                // Ввод пользователем номера месяца
-
-            // Проверка на корректность ввода номера месяца
-            if (month > 12)
+            // Запуск цикла для вывода данных массива
+            for (int i = 0; i < phoneBook.GetLength(0); i++)
             {
-                Console.WriteLine("Вы ввели некорректный номер месяца");
-                return;
+                for (int j = 0; j < phoneBook.GetLength(1); j++)
+                {
+                    Console.Write($"{phoneBook[i,j]}");
+                }
+                Console.WriteLine();
             }
 
-            // Обработка условия для вывода сообщения
-            if ((month == 12 || month == 1 || month == 2) && (averageTemp > 0))
-            {
-                Console.WriteLine("Дождливая погода");
-            }
-            else
-            {
-                return;
-            }
-
-            Console.Read();
+            Console.ReadLine();
+            
         }
     }
 }
