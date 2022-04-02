@@ -6,16 +6,24 @@ namespace IntroductionCourse
     {
         static void Main(string[] args)
         {
-            string firstName = GetFirstName();  // Вызов метода запроса Имени
-            string lastName = GetLastName();    // Вызов метода запроса Фамилии
-            string patronymic = GetPatronymic();    // Вызов метода запроса Фамилии
-            string FullName = GetFullName(firstName, lastName, patronymic); // Вызов метода вызова объединенной строки
-            Console.WriteLine(FullName); // Вывод данных на консоль
+            Console.Write("Введите количество пользователей: ");
+            int count = Convert.ToInt32(Console.ReadLine());
+
+            //Цикл для ввода и вывода данных
+            while (count > 0)
+            {
+                string firstName = GetFirstName();  // Вызов метода запроса Имени
+                string lastName = GetLastName();    // Вызов метода запроса Фамилии
+                string patronymic = GetPatronymic();    // Вызов метода запроса Фамилии
+                string FullName = GetFullName(firstName, lastName, patronymic); // Вызов метода вызова объединенной строки
+                Console.WriteLine(FullName); // Вывод данных на консоль
+                count--;
+            }
         }
-                            
+
         static string GetFullName(string firstName, string lastName, string patronymic)
         {
-            return $"Привет, {lastName} {firstName} {patronymic}!";
+            return $"{lastName} {firstName} {patronymic}!";
         }
 
         static string GetLastName()
@@ -37,6 +45,6 @@ namespace IntroductionCourse
             Console.Write("Отчество: ");
             string patronymic = Console.ReadLine();
             return patronymic;
-        }
+        }        
     }
 }
