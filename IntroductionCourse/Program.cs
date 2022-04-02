@@ -6,36 +6,45 @@ namespace IntroductionCourse
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите минимальную температуру за сутки");
-            float minTemp = Convert.ToInt64(Console.ReadLine());            // Ввод пользователем значение минимальной температуры
+            Console.Write("Введите количество пользователей: ");
+            int count = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Введите максимальную температуру за сутки");
-            float maxTemp = Convert.ToInt64(Console.ReadLine());            // Ввод пользователем значение максимальной температуры
-
-            float averageTemp = (minTemp + maxTemp) / 2;                    // Вычисление среднесуточного значения температуры
-            Console.WriteLine($"Среднесуточная температура: {averageTemp}");
-
-            Console.WriteLine("Введите порядковый номер месяца");
-            int month = Convert.ToInt32(Console.ReadLine());                // Ввод пользователем номера месяца
-
-            // Проверка на корректность ввода номера месяца
-            if (month > 12)
+            //Цикл для ввода и вывода данных
+            while (count > 0)
             {
-                Console.WriteLine("Вы ввели некорректный номер месяца");
-                return;
+                string firstName = GetFirstName();  // Вызов метода запроса Имени
+                string lastName = GetLastName();    // Вызов метода запроса Фамилии
+                string patronymic = GetPatronymic();    // Вызов метода запроса Фамилии
+                string FullName = GetFullName(firstName, lastName, patronymic); // Вызов метода вызова объединенной строки
+                Console.WriteLine(FullName); // Вывод данных на консоль
+                count--;
             }
+        }
 
-            // Обработка условия для вывода сообщения
-            if ((month == 12 || month == 1 || month == 2) && (averageTemp > 0))
-            {
-                Console.WriteLine("Дождливая погода");
-            }
-            else
-            {
-                return;
-            }
+        static string GetFullName(string firstName, string lastName, string patronymic)
+        {
+            return $"{lastName} {firstName} {patronymic}!";
+        }
 
-            Console.Read();
+        static string GetLastName()
+        {
+            Console.Write("Фамилия: ");
+            string lastName = Console.ReadLine();
+            return lastName;
+        }
+
+        static string GetFirstName()
+        {
+            Console.Write("Имя: ");
+            string firstName = Console.ReadLine();
+            return firstName;
+        }
+
+        static string GetPatronymic()
+        {
+            Console.Write("Отчество: ");
+            string patronymic = Console.ReadLine();
+            return patronymic;
         }
     }
 }
