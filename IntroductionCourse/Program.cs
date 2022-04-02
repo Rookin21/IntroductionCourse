@@ -45,6 +45,6 @@ namespace IntroductionCourse
             Console.Write("Отчество: ");
             string patronymic = Console.ReadLine();
             return patronymic;
-        }        
+        }
     }
 }
