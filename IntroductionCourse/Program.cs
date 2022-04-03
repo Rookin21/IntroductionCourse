@@ -24,5 +24,6 @@ namespace IntroductionCourse
             }
             return sum;
         }
+
     }
 }
