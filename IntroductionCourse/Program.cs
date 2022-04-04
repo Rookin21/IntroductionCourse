@@ -8,10 +8,5 @@ namespace IntroductionCourse
         {
 
         }
-
-        static int Fibonachi(int number)
-        {
-
-        }
     }
 }
