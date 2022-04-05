@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+using System;
 
 namespace IntroductionCourse
 {
@@ -7,10 +6,7 @@ namespace IntroductionCourse
     {
         static void Main()
         {
-            Console.WriteLine("Введите текст: ");
-            string text = Console.ReadLine();
-            string path = "D:/Homework_GB/homework_lesson5_1.txt";
-            File.WriteAllText(path, text);
+
         }
     }
 }
